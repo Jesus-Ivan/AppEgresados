@@ -86,12 +86,12 @@ public class FirstFragment extends Fragment {
 
     private void initPub(View view) {
         List<ItemPub2> elements= new ArrayList<>();
-        elements.add(new ItemPub2("Moises Rodriguez bolaños","Hola amigos, soy egresado del tecnologico de tehuacan. Actualmente estoy laborando en BonIce Inc. y tengo unas ofertas de empleo bien prronsisimas alv, me preguntaba si alguien de ustedes estaria interesado en trabajar",R.drawable.img_null,R.drawable.ic_titulo_2));
-        elements.add(new ItemPub2("Moises Rodriguez bolaños","Hola amigos, soy egresado del tecnologico de tehuacan. Actualmente estoy laboran",R.drawable.hyper_x,R.drawable.ic_titulo_2));
-        elements.add(new ItemPub2("Moises Rodriguez bolaños","Hola amigos, soy egresado del tecnologico de tehuacan. ",R.drawable.hyper_x,R.drawable.ic_titulo_2));
-        elements.add(new ItemPub2("Moises Rodriguez bolaños","Hola amigos, soy egresado del tecnologico de tehuacan. Actualmente estoy laborando en BonIce Inc. y tengo unas ofertas de empleo bien prronsisimas alv, me preguntaba si alguien de ustedes estaria interesado en trabajar",R.drawable.img_null,R.drawable.ic_sin_titulo));
-        elements.add(new ItemPub2("Moises Rodriguez bolaños","Hola amigos, ",R.drawable.hyper_x,R.drawable.ic_titulo_2));
-        elements.add(new ItemPub2("Moises Rodriguez bolaños","Hola amigos, soy egresado del tec",R.drawable.hyper_x,R.drawable.ic_titulo_2));
+        elements.add(new ItemPub2("Moises Rodriguez Bolaños","Hola amigos, soy egresado del tecnologico de tehuacan. Actualmente estoy laborando en BonIce Inc. y tengo unas ofertas de empleo bien prronsisimas alv, me preguntaba si alguien de ustedes estaria interesado en trabajar",R.drawable.img_null,R.drawable.ic_titulo_2));
+        elements.add(new ItemPub2("Perez Lechuga Jesus Ivan","Hola amigos, soy egresado del tecnologico de tehuacan. Actualmente estoy laboran", R.drawable.bolsa_2,R.drawable.ic_titulo_2));
+        elements.add(new ItemPub2("Velez silva Jose Manuel","Hola amigos, soy egresado del tecnologico de tehuacan. ", android.R.drawable.sym_def_app_icon,R.drawable.ic_titulo_2));
+        elements.add(new ItemPub2("Yolanda Iridian Ramirez Lerdo","Hola amigos, soy egresado del tecnologico de tehuacan. Actualmente estoy laborando en BonIce Inc. y tengo unas ofertas de empleo bien prronsisimas alv, me preguntaba si alguien de ustedes estaria interesado en trabajar",R.drawable.img_null,R.drawable.ic_sin_titulo));
+        elements.add(new ItemPub2("Daniel Valerio Rosales","Hola amigos, ",R.drawable.hyper_x,R.drawable.ic_titulo_2));
+        elements.add(new ItemPub2("Otro Moises","Hola amigos, soy egresado del tec",R.drawable.bolsa_trabajo,R.drawable.ic_titulo_2));
 
         PubAdapter2 pubAdapterImg = new PubAdapter2(elements,getContext());
         RecyclerView incio= view.findViewById(R.id.rv_inicio);

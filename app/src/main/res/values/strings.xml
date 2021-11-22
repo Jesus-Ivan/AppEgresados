@@ -28,6 +28,10 @@
     <string name="btn_cancelar">Cancelar</string>
     <string name="btn_guardar">Guardar</string>
     <string name="lbl_mispib">Mis publicaciones</string>
+    <string name="popup_menu_delete">Eliminar</string>
+    <string name="popup_menu_edit">Editar</string>
+    <string name="popup_menu_hide">Ocultar</string>
+    <string name="popup_menu_show">Reactivar</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

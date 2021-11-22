@@ -102,10 +102,10 @@ public class SecondFragment extends Fragment {
                          pub = new Intent(getActivity(),MyProfile.class);
                         break;
                     case 2:
-                        pub = new Intent(getActivity(),Registro.class);
+                        pub = new Intent(getActivity(),ControlPub.class);
                         break;
                     case 3:
-                        pub = new Intent(getActivity(),NuevaPublicacion.class);
+                        pub = new Intent(getActivity(),PubPendientes.class);
                         break;
                     case 4:
                         pub = new Intent(getActivity(),MyProfile.class);
