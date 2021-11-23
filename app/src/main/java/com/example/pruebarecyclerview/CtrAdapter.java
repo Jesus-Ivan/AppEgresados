@@ -1,9 +1,11 @@
 package com.example.pruebarecyclerview;
 
 import android.content.Context;
+import android.content.Intent;
 import android.nfc.Tag;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -69,7 +71,7 @@ public class CtrAdapter extends RecyclerView.Adapter<CtrAdapter.ViewHolder> impl
         }
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, PopupMenu.OnMenuItemClickListener {
         ImageView imagen;
         TextView texto;
         ImageButton imageButton_options;
@@ -97,7 +99,28 @@ public class CtrAdapter extends RecyclerView.Adapter<CtrAdapter.ViewHolder> impl
         private void showPopupMenu(View view) {
             PopupMenu popupMenu = new PopupMenu(view.getContext(),view);
             popupMenu.inflate(R.menu.popup_menu);
+            popupMenu.setOnMenuItemClickListener(this);
             popupMenu.show();
+        }
+
+        @Override
+        public boolean onMenuItemClick(MenuItem item) {
+            Intent pub=null;
+            //Acciones a realizar al hacer clic en el menu PopUp
+            switch (item.getItemId()){
+                case R.id.action_edit:
+                    pub = new Intent(context,NuevaPublicacion.class);
+                    context.startActivity(pub);
+                    return true;
+                case R.id.action_hide:
+
+                    return true;
+                case R.id.action_delete:
+
+                    return true;
+                default:
+                    return false;
+            }
         }
     }
 }
