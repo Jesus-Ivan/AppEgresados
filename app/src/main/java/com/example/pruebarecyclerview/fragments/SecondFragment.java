@@ -1,4 +1,4 @@
-package com.example.pruebarecyclerview;
+package com.example.pruebarecyclerview.fragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.example.pruebarecyclerview.R;
+import com.example.pruebarecyclerview.activities.ControlPub;
+import com.example.pruebarecyclerview.activities.MyProfile;
+import com.example.pruebarecyclerview.activities.Opc;
+import com.example.pruebarecyclerview.activities.OpcAdapter;
+import com.example.pruebarecyclerview.activities.PubPendientes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,7 +77,7 @@ public class SecondFragment extends Fragment {
 
         lst = new ArrayList<>();
 
-        lst.add(new Opc(1,R.drawable.ic_user_edit,"Modificar mi perfil"));
+        lst.add(new Opc(1, R.drawable.ic_user_edit,"Modificar mi perfil"));
         lst.add(new Opc(2,R.drawable.ic_control,"Control de publicaciones"));
         lst.add(new Opc(3,R.drawable.ic_pendient,"Publicaciones pendientes"));
         lst.add(new Opc(4,R.drawable.ic_logout,"Cerrar sesion"));
@@ -99,13 +106,13 @@ public class SecondFragment extends Fragment {
                 Intent pub=null;
                 switch ( c.getId()){
                     case 1:
-                         pub = new Intent(getActivity(),MyProfile.class);
+                         pub = new Intent(getActivity(), MyProfile.class);
                         break;
                     case 2:
-                        pub = new Intent(getActivity(),ControlPub.class);
+                        pub = new Intent(getActivity(), ControlPub.class);
                         break;
                     case 3:
-                        pub = new Intent(getActivity(),PubPendientes.class);
+                        pub = new Intent(getActivity(), PubPendientes.class);
                         break;
                     case 4:
                         pub = new Intent(getActivity(),MyProfile.class);

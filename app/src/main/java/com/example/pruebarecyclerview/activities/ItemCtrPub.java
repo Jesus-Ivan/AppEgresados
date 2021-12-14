@@ -1,4 +1,4 @@
-package com.example.pruebarecyclerview;
+package com.example.pruebarecyclerview.activities;
 
 public class ItemCtrPub {
     String texto;

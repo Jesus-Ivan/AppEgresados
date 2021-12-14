@@ -2,7 +2,8 @@
     <string name="app_name">Egresa2</string>
     <string name="lbl_iniciar">Iniciar sesion</string>
     <string name="lbl_correo">Correo electronico</string>
-    <string name="lbl_contraseña">Constraseña</string>
+    <string name="lbl_contraseña">Contraseña</string>
+    <string name="lbl_confirmarContraseña">Confirmar contraseña</string>
     <string name="lbl_ingresar">Ingresar</string>
     <string name="lbl_registrar1">¿No tiene cuenta?</string>
     <string name="lbl_frase">Un lugar para crecer</string>
@@ -32,6 +33,14 @@
     <string name="popup_menu_edit">Editar</string>
     <string name="popup_menu_hide">Ocultar</string>
     <string name="popup_menu_show">Reactivar</string>
+
+
+    <string-array name="lista">
+        <item>Ing. En sistemas computacionales</item>
+        <item>Lic. En administracion</item>
+        <item>Ing. Biomedica</item>
+        <item>Lic. en contaduria</item>
+    </string-array>
 
 
     <!-- TODO: Remove or change this placeholder text -->

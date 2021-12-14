@@ -1,13 +1,17 @@
-package com.example.pruebarecyclerview;
+package com.example.pruebarecyclerview.activities;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.nfc.Tag;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,6 +19,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.pruebarecyclerview.R;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -25,6 +31,7 @@ public class CtrAdapter extends RecyclerView.Adapter<CtrAdapter.ViewHolder> impl
     private List<ItemCtrPub> mData;
     private LayoutInflater mInflater;
     private Context context;
+    Dialog dialog;
 
     private View.OnClickListener listener;
 
@@ -43,6 +50,9 @@ public class CtrAdapter extends RecyclerView.Adapter<CtrAdapter.ViewHolder> impl
 
         //Escuchar el evento click de la lista
         view.setOnClickListener(this);
+
+        //creamos el objeto para cuadro de dialogo de "eliminar " en el popup menu
+        dialog= new Dialog(context);
 
         return new CtrAdapter.ViewHolder(view);
     }
@@ -114,13 +124,32 @@ public class CtrAdapter extends RecyclerView.Adapter<CtrAdapter.ViewHolder> impl
                     return true;
                 case R.id.action_hide:
 
+
                     return true;
                 case R.id.action_delete:
-
+                    openWarningDialog();
                     return true;
                 default:
                     return false;
             }
+        }
+
+        private void openWarningDialog() {
+            dialog.setContentView(R.layout.dialog_warning);
+            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+            Button button7 =dialog.findViewById(R.id.button7);
+            Button button6 =dialog.findViewById(R.id.button6);
+            dialog.show();
+
+            //Accion a realizar al "NO eliminar publicacion"
+            button7.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    dialog.dismiss();
+                }
+            });
+
         }
     }
 }

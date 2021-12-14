@@ -1,11 +1,11 @@
-package com.example.pruebarecyclerview
+package com.example.pruebarecyclerview.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import java.security.Principal
+import com.example.pruebarecyclerview.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

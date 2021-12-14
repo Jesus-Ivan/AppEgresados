@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NuevaPublicacion">
+    tools:context=".activities.NuevaPublicacion">
 
     <View
         android:id="@+id/view"
@@ -50,15 +50,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
+    <ImageView
+        android:id="@+id/addImage"
         android:layout_width="match_parent"
-        android:layout_height="54dp"
+        android:layout_height="270dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="25dp"
         android:background="@drawable/btn_azul"
-        android:scaleType="centerInside"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2"
@@ -69,18 +69,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginBottom="86dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/btn_roj"
         android:text="@string/btn_cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/publicarPost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="25dp"
-        android:layout_marginBottom="86dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/btn_verde"
         android:text="@string/btn_publicar"
         app:layout_constraintBottom_toBottomOf="parent"

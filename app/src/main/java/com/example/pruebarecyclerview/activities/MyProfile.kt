@@ -1,7 +1,8 @@
-package com.example.pruebarecyclerview
+package com.example.pruebarecyclerview.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.pruebarecyclerview.R
 
 class MyProfile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

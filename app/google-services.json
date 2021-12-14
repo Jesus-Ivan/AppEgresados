@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "400577619214",
+    "project_id": "egresa2-9386f",
+    "storage_bucket": "egresa2-9386f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400577619214:android:4a19da81655da1cb55235f",
+        "android_client_info": {
+          "package_name": "com.example.pruebarecyclerview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "400577619214-g9kttdch73gohotm5cljcciprm5s361f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pruebarecyclerview",
+            "certificate_hash": "bd5147901a21ed37c12448d58b2839cac0775168"
+          }
+        },
+        {
+          "client_id": "400577619214-5ocqo9arloo6ttqb6ukf5vj05su5fsqd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCuFvI2LyUpAqEe_tzcvEQGQDHHqoXbtQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "400577619214-5ocqo9arloo6ttqb6ukf5vj05su5fsqd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

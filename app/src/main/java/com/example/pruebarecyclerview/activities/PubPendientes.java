@@ -1,4 +1,4 @@
-package com.example.pruebarecyclerview;
+package com.example.pruebarecyclerview.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.example.pruebarecyclerview.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +26,8 @@ public class PubPendientes extends AppCompatActivity {
     }
 
 
+
+    //Aqui se agregan las publicaciones pendientes de revisar por el ADMIN
     private void iniciarcontrol() {
         recyclerCtr=findViewById(R.id.RV_PubPendientes);
         recyclerCtr.setLayoutManager(new LinearLayoutManager(this));
@@ -35,14 +39,6 @@ public class PubPendientes extends AppCompatActivity {
         }
         AdapterPendientes = new PubPendientesAdapter(misPubList,this);
 
-        /*Accion a realizar al hacer click en un item del control de publicaciones
-        AdapterPendientes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Seleccion:"+misPubList.get(recyclerCtr.getChildAdapterPosition(view)).texto,Toast.LENGTH_LONG).show();
-            }
-        });
-        */
         recyclerCtr.setAdapter(AdapterPendientes);
     }
 }

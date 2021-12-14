@@ -1,4 +1,4 @@
-package com.example.pruebarecyclerview;
+package com.example.pruebarecyclerview.activities;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.pruebarecyclerview.R;
 
 import java.util.List;
 

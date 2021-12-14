@@ -1,4 +1,4 @@
-package com.example.pruebarecyclerview;
+package com.example.pruebarecyclerview.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.example.pruebarecyclerview.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,8 +28,6 @@ public class ControlPub extends AppCompatActivity {
         setContentView(R.layout.activity_control_pub);
 
         iniciarcontrol();
-
-
     }
 
     private void iniciarcontrol() {
@@ -36,6 +36,8 @@ public class ControlPub extends AppCompatActivity {
 
         List<ItemCtrPub> misPubList= new ArrayList<>();
 
+
+        //con este ciclo se agregaron las publicaciones al control de MIS PUBLICACIONES
         for (int c=0; c<20;c++){
             misPubList.add(new ItemCtrPub("ESTA ES MI PUBLICACION numero: "+c+" aver si funciona", R.drawable.hyper_x));
         }

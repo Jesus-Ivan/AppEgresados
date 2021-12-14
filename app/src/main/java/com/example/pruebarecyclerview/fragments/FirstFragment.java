@@ -1,4 +1,4 @@
-package com.example.pruebarecyclerview;
+package com.example.pruebarecyclerview.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,12 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.pruebarecyclerview.R;
+import com.example.pruebarecyclerview.activities.ItemPub2;
+import com.example.pruebarecyclerview.activities.NuevaPublicacion;
+import com.example.pruebarecyclerview.activities.PubAdapter2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +38,7 @@ public class FirstFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    View mView;
 
     public FirstFragment() {
         // Required empty public constructor
@@ -69,19 +76,20 @@ public class FirstFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =inflater.inflate(R.layout.fragment_first, container, false);
-        initPub(view);
+        mView =inflater.inflate(R.layout.fragment_first, container, false);
+        initPub(mView);
 
-        ImageButton nuevaPub =(ImageButton)view.findViewById(R.id.imageButton2);
+        //Cuando hace click en floating action button
+        ImageButton nuevaPub =(ImageButton)mView.findViewById(R.id.imageButton2);
         nuevaPub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent pub = new Intent(getActivity(),NuevaPublicacion.class);
+                Intent pub = new Intent(getContext(), NuevaPublicacion.class);
                 startActivity(pub);
             }
         });
 
-        return view;
+        return mView;
     }
 
     private void initPub(View view) {
@@ -95,6 +103,15 @@ public class FirstFragment extends Fragment {
 
         PubAdapter2 pubAdapterImg = new PubAdapter2(elements,getContext());
         RecyclerView incio= view.findViewById(R.id.rv_inicio);
+
+        //Implementacion de las acciones al hacer clic en alguna publicacion del inicio
+        pubAdapterImg.setOnclickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(),"Seleccion "+elements.get(incio.getChildAdapterPosition(view)).getNombre(),Toast.LENGTH_LONG).show();
+
+            }
+        });
 
         incio.setLayoutManager(new LinearLayoutManager(getContext()));
         incio.setAdapter(pubAdapterImg);
