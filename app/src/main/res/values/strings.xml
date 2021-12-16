@@ -33,6 +33,7 @@
     <string name="popup_menu_edit">Editar</string>
     <string name="popup_menu_hide">Ocultar</string>
     <string name="popup_menu_show">Reactivar</string>
+    <string name="Categoria">Selecciona categoria</string>
 
 
     <string-array name="lista">
@@ -41,6 +42,7 @@
         <item>Ing. Biomedica</item>
         <item>Lic. en contaduria</item>
     </string-array>
+
 
 
     <!-- TODO: Remove or change this placeholder text -->

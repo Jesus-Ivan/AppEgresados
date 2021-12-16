@@ -121,7 +121,7 @@ public class User {
         this.contraseña = contraseña;
     }
 
-    public boolean isTitulo() {
+    public boolean getTitulo() {
         return titulo;
     }
 

@@ -8,7 +8,7 @@
 
     <View
         android:id="@+id/vector_1"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="133.08dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"

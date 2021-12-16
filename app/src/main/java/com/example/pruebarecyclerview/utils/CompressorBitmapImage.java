@@ -18,7 +18,8 @@ public class CompressorBitmapImage {
     /*
      * Metodo que permite comprimir imagenes y transformarlas a bitmap
      */
-    public static byte[] getImage(Context ctx, String path, int width, int height) {
+
+    public static byte[] getImg(Context ctx, String path, int width, int height){
         final File file_thumb_path = new File(path);
         Bitmap thumb_bitmap = null;
 
@@ -37,4 +38,5 @@ public class CompressorBitmapImage {
         byte[] thumb_byte = baos.toByteArray();
         return  thumb_byte;
     }
+
 }

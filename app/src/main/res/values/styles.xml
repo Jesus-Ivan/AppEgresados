@@ -13,6 +13,13 @@
         <item name="DialogSpotColor">@android:color/holo_orange_dark</item>
         <item name="DialogSpotCount">4</item>
     </style>
+
+    <style name="UploadPost" parent="android:Theme.DeviceDefault.Dialog">
+        <item name="DialogTitleAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="DialogTitleText">Creando publicacion</item>
+        <item name="DialogSpotColor">@android:color/holo_blue_light</item>
+        <item name="DialogSpotCount">4</item>
+    </style>
     
     
     

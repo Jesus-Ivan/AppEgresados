@@ -122,7 +122,6 @@ public class SecondFragment extends Fragment {
                         break;
                 }
                 startActivity(pub);
-                Toast.makeText(getContext(),c.nombre,Toast.LENGTH_LONG).show();
             }
         });
         return view;

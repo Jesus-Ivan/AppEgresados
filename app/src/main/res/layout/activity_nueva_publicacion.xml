@@ -10,7 +10,7 @@
         android:id="@+id/view"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
-        android:background="@drawable/top_blue"
+        android:background="#47ACF4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,10 +34,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine2"
+        android:id="@+id/descripcion"
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/caja_texto_gris"
         android:ems="10"
         android:fontFamily="sans-serif-smallcaps"
@@ -52,21 +52,21 @@
 
     <ImageView
         android:id="@+id/addImage"
-        android:layout_width="match_parent"
-        android:layout_height="270dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="25dp"
-        android:background="@drawable/btn_azul"
-        android:scaleType="fitCenter"
+        android:background="@drawable/caja_texto_gris"
+        android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2"
+        app:layout_constraintTop_toBottomOf="@+id/categoria"
         app:srcCompat="@drawable/ic_add_image" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginBottom="20dp"
@@ -77,13 +77,39 @@
 
     <Button
         android:id="@+id/publicarPost"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/btn_verde"
+        android:background="@drawable/nombre_pub"
         android:text="@string/btn_publicar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Spinner
+        android:id="@+id/categoria"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/caja_texto_azul3"
+        android:popupBackground="@drawable/caja_texto_azul4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descripcion" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/abeezee"
+        android:text="@string/Categoria"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/categoria"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

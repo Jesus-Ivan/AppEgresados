@@ -2,8 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pruebarecyclerview">
 
+    <uses-feature android:name="android.hardware.CAMERA"
+        android:required="false"/>
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
 
 
     <application
@@ -13,6 +18,18 @@
         android:roundIcon="@mipmap/ic_app_circle"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        
+        <provider
+            android:authorities="com.example.pruebarecyclerview"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+
+        </provider>
+        
         <activity android:name=".activities.NuevaPublicacion"></activity>
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.PubPendientes" />

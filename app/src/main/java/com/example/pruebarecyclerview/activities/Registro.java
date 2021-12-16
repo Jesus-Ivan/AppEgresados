@@ -7,13 +7,17 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -103,8 +107,8 @@ public class Registro extends AppCompatActivity {
         //validacion de todos los campos
         if (!dataNombre.isEmpty() && !dataApellidoP.isEmpty() &&  !dataApelidoMaterno.isEmpty() && !dataCorreo.isEmpty() && !dataTelefono.isEmpty() && !dataControl.isEmpty() && !dataOcupacion.isEmpty() && !dataLugarOcupacion.isEmpty() && !dataSpLista.isEmpty() && !dataContraseña.isEmpty() && !dataConfirmarContraseña.isEmpty() ) {
             if(!isEmailValid(dataCorreo)){
-                Toast.makeText(this, "Correo no valido", Toast.LENGTH_SHORT).show();
-
+                //Toast.makeText(this, "Correo no valido", Toast.LENGTH_SHORT).show();
+                toastError("Ingresa correo institucional");
             }else {
                 //Actions to realize when everything is ok
                 if(dataContraseña.equals(dataConfirmarContraseña)){
@@ -112,15 +116,17 @@ public class Registro extends AppCompatActivity {
                         //Creando el usuario en Firebase Auth
                         createUser(dataNombre,dataApellidoP,dataApelidoMaterno,dataCorreo,dataTelefono,dataControl,dataOcupacion,dataLugarOcupacion,dataSpLista,titulado,dataContraseña);
                     }else {
-                        Toast.makeText(this, "La contraseña debe tener al menos 6 caracteres", Toast.LENGTH_LONG).show();
+                        //Toast.makeText(this, "La contraseña debe tener al menos 6 caracteres", Toast.LENGTH_LONG).show();
+                        toastError("La contraseña debe tener al menos 6 caracteres");
                     }
                 }else {
-                    Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+                    toastError("Las contraseñas no coinciden");
                 }
             }
         }else {
-            Toast.makeText(this, "Por favor rellena todos los campos", Toast.LENGTH_SHORT).show();
-
+            //Toast.makeText(this, "Por favor rellena todos los campos", Toast.LENGTH_SHORT).show();
+            toastError("Por favor rellena todos los campos");
         }
             
 
@@ -215,6 +221,18 @@ public class Registro extends AppCompatActivity {
                 titulado=false;
             }
         }
+    }
+    public void toastError(String msm){
+        LayoutInflater layoutInflater = getLayoutInflater();
+        View view =layoutInflater.inflate(R.layout.toast_error, (ViewGroup)findViewById(R.id.ll_custom_toast_error));
+        TextView txtMessage= view.findViewById(R.id.message);
+        txtMessage.setText(msm);
+
+        Toast toast= new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.BOTTOM,0,200);
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(view);
+        toast.show();
     }
 
 
